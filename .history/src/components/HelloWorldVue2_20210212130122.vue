@@ -2,11 +2,11 @@
 	<div class="container px-4 mx-auto sm:px-8">
 		<!-- Main wrapper starts -->
 		<div class="py-8">
-			<!-- Heading starts -->
+			<!-- Header starts -->
 			<div>
-				<h2 class="mb-5 text-2xl font-semibold leading-tight">Companies table (made with vue2)</h2>
+				<h2 class="mb-5 text-2xl font-semibold leading-tight">Companies table</h2>
 			</div>
-			<!-- Heading ends -->
+			<!-- Header ends -->
 
 			<!-- Filter wrapper starts -->
 			<div class="flex flex-col items-center justify-start my-2 sm:flex-row">
