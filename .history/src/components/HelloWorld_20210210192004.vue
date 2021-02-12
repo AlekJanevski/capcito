@@ -1,0 +1,56 @@
+<template>
+   <div>
+    <ul class="test-list" v-for="user in usersList" :key="user.id">
+      <li class="test-list--item">
+        <strong>{{ user.name }}</strong> <br>
+        {{ user.email }} <br>
+        {{ user.website }}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'Hello World',
+
+  data() {
+    return {
+      usersList: []
+    };
+  },
+
+  mounted() {
+    axios.get("https://jsonplaceholder.typicode.com/users")
+      .then(res => {
+        this.usersList = res.data;
+        console.log(this.usersList)
+      })
+      .catch(error => {
+        console.log(error)
+         // Manage errors if found any
+      })
+  }
+}
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
